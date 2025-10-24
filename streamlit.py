@@ -81,12 +81,11 @@ def main():
                             buf = io.BytesIO()
                             pil_image.save(buf, format="PNG")
                             st.download_button(
-                                label="Download",
+                                label=f"⬇️ Download",
                                 data=buf.getvalue(),
                                 file_name=f"generated_face_{idx + 1}.png",
                                 mime="image/png",
-                                key=f"download_{idx}",
-                                unsafe_allow_html=True
+                                key=f"download_{idx}"
                             )
     
     with st.expander("About this model"):
