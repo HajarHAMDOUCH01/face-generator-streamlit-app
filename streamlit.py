@@ -20,7 +20,7 @@ def generate_faces(num_faces, model, device):
     model.eval()
     with torch.no_grad():
         z = torch.randn(num_faces, 512, device=device)
-        images = model.generate(z, truncation_psi=0.65)
+        images = model.generate(z, truncation_psi=0.5)
     images = (images + 1) / 2
     images = torch.clamp(images, 0, 1)
     return images
