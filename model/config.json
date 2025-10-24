@@ -1,0 +1,8 @@
+{
+  "img_channels": 3,
+  "img_size": 128,
+  "mapping_layers": 8,
+  "style_mixing_prob": 0.9,
+  "w_dim": 512,
+  "z_dim": 512
+}
