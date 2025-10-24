@@ -9,14 +9,7 @@ import numpy as np
 sys.path.append("../")
 from model.style_gan import StyleGAN
 
-import base64
 from pathlib import Path
-
-# Load and encode your GIF
-def get_base64_gif(gif_path):
-    with open(gif_path, "rb") as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
 
 def load_stylegan_model(model_path, device):
     model = StyleGAN.from_pretrained("hajar001/stylegan2-ffhq-128")
@@ -83,13 +76,12 @@ def main():
                             
                             # Display image
                             st.image(pil_image, caption=f"Face {idx + 1}", use_container_width=True)
-                            gif_download = get_base64_gif("downlaod.gif")
 
                             # Download button for each image
                             buf = io.BytesIO()
                             pil_image.save(buf, format="PNG")
                             st.download_button(
-                                label=f'<img src="data:image/gif;base64,{gif_download}" width="20" height="20"> Download',
+                                label="Download",
                                 data=buf.getvalue(),
                                 file_name=f"generated_face_{idx + 1}.png",
                                 mime="image/png",
