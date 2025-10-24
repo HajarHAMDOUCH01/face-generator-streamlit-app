@@ -44,7 +44,7 @@ def main():
     st.title(" Face Generator with StyleGAN")
     st.write("Generate realistic faces using StyleGAN2-FFHQ model")
     
-    model_path = "models/model.safetensors"
+    model_path = "model/model.safetensors"
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     
     # Load model (cache to avoid reloading on every interaction)
