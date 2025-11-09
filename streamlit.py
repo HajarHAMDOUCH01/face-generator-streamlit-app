@@ -97,5 +97,13 @@ def main():
         - **Truncation PSI**: 0.65 (controls image quality vs diversity)
         """)
 
+    col1, col2, col3 = st.columns([1, 2, 1])
+    with col2:
+        st.link_button(
+            "🤗 View Model on Hugging Face",
+            "https://huggingface.co/hajar001/stylegan2-ffhq-128",
+            use_container_width=True
+        )
+
 if __name__ == "__main__":
     main()
