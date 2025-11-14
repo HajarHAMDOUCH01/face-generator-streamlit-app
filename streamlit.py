@@ -90,7 +90,9 @@ def main():
     
     with st.expander("About this model"):
         st.write("""
-        This app uses StyleGAN2 trained on FFHQ dataset to generate 128x128 face images.
+        This is a complete implentation of styleGAN paper with PyTorch.
+        Built and trained from scratch.
+        FFHQ dataset 65k images.
         
         - **Model**: StyleGAN2-FFHQ-128
         - **Resolution**: 128 × 128 pixels
